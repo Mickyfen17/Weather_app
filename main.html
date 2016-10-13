@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Weather App</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!-- Erik Flowers Weather Icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+		<!-- Google Fonts (Rubik) -->
+		<link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
+		<!-- Local CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	<body>
+	  	<div class="navbar">
+			<span id="title">Weather App</span>
+			<div class="locSearch">
+				<form>
+					<input id="locationSearch" type="text" name="location" placeholder="Type a location....">
+					<p id="warningMessage"></p>
+				</form>
+			</div>
+			<div class="tempToggle">
+				<span>Units:</span>
+				<label class="radio-inline"><input type="radio" name="optradio" id="degC" checked="checked">&deg C</label>
+				<label class="radio-inline"><input type="radio" name="optradio" id="degF">&deg F</label>
+			</div>
+		</div>
+		<div class="content">
+			<div class="conditionsWrapper">
+				<div class="conditionsNow">
+					<div id="currentLocation">
+						
+					</div>
+					<div id="currentWeather">
+						
+					</div>
+				</div>
+			</div>
+			<div class="forecastWrapper">
+				<div class="forecast">
+					<p></p>
+					<div id="forecastTxt">
+						
+					</div>
+					<div id="currentWindSpeed">
+						
+					</div>
+					<div id="astronomy">
+						<span class="sunrise"></span>
+						<span class="sunset"></span>
+					</div>
+					<div id="highLow">
+						<div class="high">
+							<i class="wi wi-thermometer"></i>
+							<span></span>
+						</div>
+						<div class="low">
+							<i class="wi wi-thermometer-exterior"></i>
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="future">
+				<div class="futureWrapper col-1">
+					<div id="plusOne">
+						<p></p>
+						<div class="plusForecast">
+							
+						</div>
+						<div class="plusHighLow">
+							<div class="high">
+								<i class="wi wi-thermometer"></i>
+								<span></span>
+							</div>
+							<div class="humid" title="Humidity">
+								<i class="wi wi-humidity"></i>
+								<span></span>
+							</div>
+							<div class="low">
+								<i class="wi wi-thermometer-exterior"></i>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="futureWrapper col-2">
+					<div id="plusTwo">
+						<p></p>
+						<div class="plusForecast">
+							
+						</div>
+						<div class="plusHighLow">
+							<div class="high">
+								<i class="wi wi-thermometer"></i>
+								<span></span>
+							</div>
+							<div class="humid" title="Humidity">
+								<i class="wi wi-humidity"></i>
+								<span></span>
+							</div>
+							<div class="low">
+								<i class="wi wi-thermometer-exterior"></i>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="futureWrapper col-3">
+					<div id="plusThree">
+						<p></p>
+						<div class="plusForecast">
+							
+						</div>
+						<div class="plusHighLow">
+							<div class="high">
+								<i class="wi wi-thermometer"></i>
+								<span></span>
+							</div>
+							<div class="humid" title="Humidity">
+								<i class="wi wi-humidity"></i>
+								<span></span>
+							</div>
+							<div class="low">
+								<i class="wi wi-thermometer-exterior"></i>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="my-links">
+				<h6>&copy Michael Jon Fenwick | 2016 </h6>
+				<a href="http://codepen.io/michaelfenwick/" target="_blank"><i class="fa fa-codepen fa-2x" aria-hidden="true" alt="My Codepen" title="Check out my Codepen"></i></a>
+				<a href="https://github.com/Mickyfen17" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true" alt="My Github" title="Check out my Github"></i></a>
+			</div>
+		</footer>
+		<!-- Latest jQuery -->
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+		<!-- Lasest jQuery UI -->
+		<script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- Local js -->
+		<script type="text/javascript" src="assets/JS/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,306 @@
+/** {
+	border: 1px solid red;
+}*/
+
+body { /*Background Colors of Sky via UIGradiants*/
+	background: #E0EAFC; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #E0EAFC , #CFDEF3); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #E0EAFC , #CFDEF3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-size: 1.5em;
+	font-family: Rubik, sans-serif;
+	cursor: default;
+}
+.navbar {
+	margin-bottom: 0;
+	width: 100%;
+}
+/*Weather app Title styling*/
+.navbar #title {
+	font-size: 2em;
+	font-weight: 500;
+	padding-left: 50px;
+	padding-top: 2px;
+	float: left;
+	margin: none;
+}
+/*Temp toggle styling*/
+.navbar .tempToggle {
+	float: right;
+	width: 150px;
+	padding: 12px 12px 0 0;
+}
+/*Input form positioning*/
+.navbar form {
+	float: right;
+	padding: 10px 50px 0 0;
+}
+/*Input box size and styling*/
+.navbar input[type="text"] {
+	width: 200px;
+	height: 28px;
+	border-radius: 4px;
+	border: transparent;
+	padding: 0 0 0 4px;
+}
+/*Warning message to be displayed below search box (via Auto-complete)*/
+#warningMessage {
+	height: 22px;
+	padding: 2px 0 0 4px;
+
+}
+/*Main content div through page*/
+.content {
+	text-align: center;
+	width: 1000px;
+	height: auto;
+	min-height: 400px;
+	margin: 0 auto;
+}
+
+/********************************** CSS for Upper two Divs ***********************************/
+
+/*Wrapper divs for top two divs*/
+.conditionsWrapper, .forecastWrapper {
+	width: 50%;
+	float: left;
+}
+/*Inner divs to hold the content*/
+.conditionsNow, .forecast {
+	height: 170px;
+	width: 480px;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 10px auto;
+}
+/*Current location div*/
+#currentLocation {
+	height: 50px;
+	font-size: 2em;
+	font-weight: 500;
+	margin-top: 22.5px;
+}
+/*Current weather div*/
+#currentWeather {
+	height: 50px;
+	font-size: 2em;
+	margin-top: 23px;
+}
+/*Weather icon within current weather div*/
+#currentWeather span .wi {
+	font-size: 45px;
+}
+/*Styling for p which displays Today & current day*/
+.forecast p {
+	font-size: 1.7em;
+	padding-top: 2px;
+}
+/*Styling to add bold to text within span (current day)*/
+.forecast p span {
+	padding-right: 15px;
+	font-weight: 500;
+}
+/*Div styling & size for current forecast text*/
+#forecastTxt {
+	font-size: 0.9em;
+	padding: 0 8px;
+	margin: -10px 0 10px 0;
+	height: 55px;
+}
+/*Wind speed and Sunrise/Sunset styling and positioning*/
+#currentWindSpeed {
+	width: 50%;
+	float: left;
+}
+#astronomy {
+	width: 50%;
+	float: right;	
+}
+.wi-sunset, .wi-sunrise, .wi-strong-wind{
+	font-size: 20px;
+}
+.sunrise {
+	padding-right: 10px;
+}
+/*Temperature High/Low styling and positioning*/
+#highLow {
+	width: 100%;
+	display: inline-flex;
+	margin-top: 10px;
+	font-size: 1.4em;
+}
+div #highLow .high {
+	width: 50%;
+	color: #952b32;
+}
+div #highLow .low {
+	width: 50%;
+	color: #2288ee;
+} 
+
+/********************************** CSS for Lower three Divs ***********************************/
+
+/*Wrapper divs */
+.futureWrapper {
+	width: 33.333%;
+	float: left;
+}
+/*Inner divs to hold the content*/
+#plusOne, #plusTwo, #plusThree {
+	width: 313px;
+	height: 212px;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 10px auto;
+}
+/*Styling for p which displays Day, Month & date*/
+#plusOne p, #plusTwo p, #plusThree p {
+	font-size: 1.2em;
+	margin-top: 4px;
+}
+/*Weather icon within future weather div*/
+.plusForecast span .wi {
+	width: 100%;
+	font-size: 45px;
+}
+/*Sizing for plusForecast inner div (forecast txt)*/
+.plusForecast div {
+	font-size: 0.9em;
+	height: 85px;
+	margin-top: 8px;
+	padding: 0 8px;
+}
+/*Temperature High/Low styling and positioning*/
+.plusHighLow {
+	margin-top: 8px;
+}
+.plusHighLow div {
+	width: 33.333%;
+	float: left;
+}
+div .plusHighLow .high {
+	color: #952b32;
+}
+div .plusHighLow .low {
+	color: #2288ee;
+}
+
+/*My name, codepen & github account links styling and hover*/
+.my-links {
+	padding: 40px 0;
+	clear: both;
+}
+
+.my-links, .fa-codepen, .fa-github {
+	text-align: center;
+	letter-spacing: 1px;
+	opacity: 0.9;
+	color: #808080;
+}
+.fa-codepen:hover, .fa-github:hover {
+	color: black;
+}
+
+/********************************** CSS for Autocomplete search and dropdown menu ***********************************/
+.ui-menu {
+	background: rgba(255, 255, 255, 0.9);
+	list-style-type: none;
+    padding: 0;
+    width: 200px;
+    border-radius: 4px;
+    position: absolute;
+}
+.ui-menu-item {
+	color: black;
+	width: 200px;
+	padding: 3px 3px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ui-menu-item:hover,
+.ui-menu-item:focus {
+	background: rgba(227, 227, 227, 0.6);
+}
+/*Move accessibility helper off screen (Built in feature with jQuery UI*/
+.ui-helper-hidden-accessible {
+	position: absolute; left:-999em;
+}
+
+/******************************************** Responsive CSS ********************************************/
+@media only screen and (max-width: 999px) {
+	/*Set content div to 100% of screen width*/
+    .content {
+    	width: 100%;
+    }
+    /*Set all wrappers to 100% of screen width */
+    .conditionsWrapper, .forecastWrapper, .futureWrapper {
+		width: 100%;
+		margin: auto;
+		clear: both;
+	}
+	/*Set lower three divs width & height to match the conditionsNow and forecast divs*/
+	#plusOne, #plusTwo, #plusThree {
+		width: 480px;
+		height: 170px;
+	}
+	/*Set plusForecast text div to 50px to hold three lines of text*/
+	.plusForecast div {
+	    height: 50px;
+	}
+	/*Set plusForecast weather icon to full width and lower size*/
+	.plusForecast span .wi {
+		width: 100%;
+		font-size: 38px;
+	}
+}
+
+@media only screen and (max-width: 659px) {
+	/*Center and increase Title & drop search bar and temp toggle to new line and center*/
+	.navbar #title {
+		width: 100%;
+		padding-left: 0;
+		text-align: center;
+		font-size: 2.5em;
+	}
+	.navbar form, .navbar .tempToggle {
+		width: 50%;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 499px) {
+	/*Set width for input search box & small amount of padding to temp toggles*/
+	.navbar input[type="text"] {
+		width: 175px;
+	}
+	.navbar .tempToggle {
+		padding-right: 1px;
+	}
+	/*Width setting for top two divs*/
+	.conditionsNow, .forecast {
+		width: 90%;
+	}
+	/*Height setting to allow for 2 lines for location display*/
+	div #currentLocation {
+		height: 84px;
+		margin: 0;
+	}
+	/*Make weather icon span full width*/
+	#currentWeather span .wi {
+		width: 100%;
+	}
+	/*Alter font size within current weather div*/
+	div #currentWeather {
+		margin: 0;
+		font-size: 1.7em;
+	}
+	/*Set width and height for 3 lower divs & forecast text div to allow for 4 lines of content*/
+	#plusOne, #plusTwo, #plusThree {
+		width: 90%;
+		height: 188px;
+	}
+	.plusForecast div {
+		height: 68px;
+	}
+}
