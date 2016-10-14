@@ -271,7 +271,7 @@ div .plusHighLow .low {
 
 @media only screen and (max-width: 499px) {
 	/*Set width for input search box & small amount of padding to temp toggles*/
-	.navbar input[type="text"] {
+	.navbar input[type="text"], .ui-menu, .ui-menu-item {
 		width: 175px;
 	}
 	.navbar .tempToggle {
