@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
 		lat = position.coords.latitude;
 		lon = position.coords.longitude;
 		console.log("Geo browser success - Lat = " + lat + " Lon = " + lon);
-		$.get("http://api.wunderground.com/api/878e77b9c3411d19/geolookup/conditions_v11/astronomy/forecast/q/" + lat + "," + lon + ".json", function(data) {
+		$.get("https://api.wunderground.com/api/878e77b9c3411d19/geolookup/conditions_v11/astronomy/forecast/q/" + lat + "," + lon + ".json", function(data) {
 			getWeather(data);
 			futureWeather(data);
 		});
@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
 	//If the browser isnt supported and/or the user declines the use of their location
 	function fail() {
 		console.log("Geo browser fail");
-		$.get("http://api.wunderground.com/api/878e77b9c3411d19/geolookup/conditions_v11/astronomy/forecast/q/autoip.json", function(data) {
+		$.get("https://api.wunderground.com/api/878e77b9c3411d19/geolookup/conditions_v11/astronomy/forecast/q/autoip.json", function(data) {
 			getWeather(data);
 			futureWeather(data);	
 		});
@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
 		   	source: locationsArray,
 		   	select: function(event, ui){
 		    	var autoCity = ui.item.value;
-		   		$.get("http://api.wunderground.com/api/878e77b9c3411d19/geolookup/conditions_v11/astronomy/forecast/q/" + autoCity + ".json", function(data) {
+		   		$.get("https://api.wunderground.com/api/878e77b9c3411d19/geolookup/conditions_v11/astronomy/forecast/q/" + autoCity + ".json", function(data) {
 					getWeather(data);
 					futureWeather(data);	
 					$("input[name='location']").val("");
@@ -190,7 +190,7 @@ jQuery(document).ready(function($) {
 		plusThreeDailyLowF = data.forecast.simpleforecast.forecastday[3].low.fahrenheit;
 
 		toggleTemp();
-		
+
 		$("#plusOne p").text(plusOneDay + ", " + plusOneMonth + " " + plusOneDate);
 		$("#plusTwo p").text(plusTwoDay + ", " + plusTwoMonth + " " + plusTwoDate);
 		$("#plusThree p").text(plusThreeDay + ", " + plusThreeMonth + " " + plusThreeDate);
