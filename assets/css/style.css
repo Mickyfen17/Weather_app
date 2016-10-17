@@ -73,11 +73,20 @@ body { /*Background Colors of Sky via UIGradiants*/
 	margin: 10px auto;
 }
 /*Current location div*/
-#currentLocation {
+.currentLocationTwoLines {
 	height: 50px;
 	font-size: 2em;
 	font-weight: 500;
 	margin-top: 22.5px;
+	@media only screen and (max-width: 499px) {
+		height: 84px;
+	}
+}
+.currentLocationOneLine {
+	height: 32px;
+	font-size: 2em;
+	font-weight: 500;
+	margin-top: 32.5px;
 }
 /*Current weather div*/
 #currentWeather {
