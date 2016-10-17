@@ -111,7 +111,7 @@ jQuery(document).ready(function($) {
 
 	//Function to get weather and display to DOM. Data will depend on how the JSON URL was created above
 	function getWeather(data) {
-		console.log(data);
+		// console.log(data);
 		if(data.response.error) {
 			alert(data.response.error.description);
 		}
@@ -139,6 +139,12 @@ jQuery(document).ready(function($) {
 		toggleTemp();
 
 		$("#currentLocation").text(location);
+		if($("#currentLocation").text().length > 27) {
+			$("#currentLocation").removeClass("currentLocationOneLine").addClass("currentLocationTwoLines");
+		} else {
+			$("#currentLocation").removeClass("currentLocationTwoLines").addClass("currentLocationOneLine");
+		}
+		
 		$(".forecast p").html("Today " + "<span><strong>" + today + "</strong></span>");
 		$("#currentWindSpeed").html("<i class='wi wi-strong-wind'></i><span> " + windSpeed + " mph " + windDir + "</span>");
 		$("#astronomy .sunrise").html("<i class='wi wi-sunrise'></i> 0" + sunriseHour + ":" + sunriseMin);
